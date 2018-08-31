@@ -24,7 +24,7 @@ ${filterAndJoinArray(fields)}
 }`;
 
 export const DEFAULT_INTERFACE_BUILDER: InterfaceAndTypeBuilder = (name, body) => `interface ${name} ${body}`;
-export const DEFAULT_INTERFACE_NAMER: WrapType = name => `I${pascalize(name)}`;
+export const DEFAULT_INTERFACE_NAMER: WrapType = name => `${pascalize(name)}`;
 export const DEFAULT_TYPE_BUILDER: InterfaceAndTypeBuilder = (name, body) => `type ${name} = ${body}`;
 export const DEFAULT_TYPE_JOINER: TypeJoiner = types => filterAndJoinArray(types, ' & ');
 export const DEFAULT_TYPE_NAMER: WrapType = name => name;
